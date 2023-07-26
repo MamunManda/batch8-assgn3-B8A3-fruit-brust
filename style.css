@@ -1,0 +1,26 @@
+.font-lato {
+  font-family: "Lato", sans-serif;
+}
+.bg-color-blOp {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bg-image-1 {
+  background-image: url("./images/banner1.png");
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.bg-image-2 {
+  background-image: url("./images/banner2.png");
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.bg-image-3 {
+  background-image: url("./images/banner3.png");
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.bg-image-4 {
+  background-image: url("./images/banner4.png");
+  background-repeat: no-repeat;
+  width: 100%;
+}

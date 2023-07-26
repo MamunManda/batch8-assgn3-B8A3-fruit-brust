@@ -22,35 +22,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- style  -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- script  -->
+    <script src="./script.js"></script>
     <title>Fruit Burst</title>
-    <style>
-      .font-lato {
-        font-family: "Lato", sans-serif;
-      }
-      .bg-color-blOp {
-        background-color: rgba(0, 0, 0, 0.5);
-      }
-      .bg-image-1 {
-        background-image: url("./images/banner1.png");
-        background-repeat: no-repeat;
-        width: 100%;
-      }
-      .bg-image-2 {
-        background-image: url("./images/banner2.png");
-        background-repeat: no-repeat;
-        width: 100%;
-      }
-      .bg-image-3 {
-        background-image: url("./images/banner3.png");
-        background-repeat: no-repeat;
-        width: 100%;
-      }
-      .bg-image-4 {
-        background-image: url("./images/banner4.png");
-        background-repeat: no-repeat;
-        width: 100%;
-      }
-    </style>
+   
   </head>
   <body class="font-lato">
     <header class="pt-[50px]">
@@ -115,7 +92,7 @@
                     We supply highly quality organic products
                   </p>
                   <button
-                    class="w-[154px] h-[64px] bg-[#F85559] rounded-lg mt-[32px]"
+                    class="w-[154px] h-[50px] bg-[#F85559] rounded-lg mt-[32px]"
                   >
                     Shop Now
                   </button>
@@ -150,7 +127,7 @@
                     We supply highly quality organic products
                   </p>
                   <button
-                    class="w-[154px] h-[64px] bg-[#F85559] rounded-lg mt-[32px]"
+                    class="w-[154px] h-[50px] bg-[#F85559] rounded-lg mt-[32px]"
                   >
                     Shop Now
                   </button>
@@ -185,7 +162,7 @@
                     We supply highly quality organic products
                   </p>
                   <button
-                    class="w-[154px] h-[64px] bg-[#F85559] rounded-lg mt-[32px]"
+                    class="w-[154px] h-[50px] bg-[#F85559] rounded-lg mt-[32px]"
                   >
                     Shop Now
                   </button>
@@ -220,7 +197,7 @@
                     We supply highly quality organic products
                   </p>
                   <button
-                    class="w-[154px] h-[64px] bg-[#F85559] rounded-lg mt-[32px]"
+                    class="w-[154px] h-[50px] bg-[#F85559] rounded-lg mt-[32px]"
                   >
                     Shop Now
                   </button>
@@ -270,7 +247,260 @@
         </div>
       </div>
     </header>
-    <main></main>
+    <main>
+        <!-- Deal of the day section  -->
+        <div class="mt-[200px] px-[240px] flex flex-col">
+            
+            <div class="flex justify-between">
+                <div class="w-[615px]">
+                    <h2 class="text-[48px] font-bold">Deal of the day</h2>
+                    <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                </div>
+                <div class="">
+                    <div class="flex items-center justify-between w-[250px]">
+                        <span class="text-4xl font-bold" id="timer">00 : 00 : 00 : 00</span>
+                      </div>
+                      <div class="flex justify-between gap-1">
+                        <p>Days</p>
+                        <p>Hours</p>
+                        <p>Minutes</p>
+                        <p>Seconds</p>
+                      </div>
+                </div>
+            </div>
+            <!-- card section  -->
+            <div class="flex justify-between pt-[50px]">
+                <!-- Apples  -->
+                <div class="w-[335px] h-[477px] border-2 rounded-lg border-[#1212121a] p-[50px] flex flex-col justify-between items-center">
+                    <div class="border-b-2 border-[#1212121a] w-[244px] pb-[30px] text-center flex flex-col items-center justify-center">
+                        <img src="./images/fruit6.png" alt="">
+                        <h2 class="pt-[30px] font-[700] text-[24px]">12.90$ - 18.85$</h2>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <div class="">
+                            <p class="">Apples</p>
+                        </div>
+                        <!-- rating section  -->
+                        <div class="rating pt-[30px]">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <!-- modal section  -->
+                        <div class="pt-[30px] flex flex-col justify-center items-center align-middle text-center">
+                            <!-- Modal Trigger Button -->
+                            <button class="text-[#F85559]" onclick="openModal()">Details</button>
+
+                            <!-- Modal Overlay -->
+                            <div class="w-[100%] h-[100%] fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-10" id="modal">
+                            <!-- Modal Content -->
+                                <div class="w-[500px] h-[600px] bg-white p-6 rounded-lg flex flex-col justify-center items-center align-middle text-center">
+                                <!-- Image -->
+                                <img src="./images/fruit6.png" alt="Image" class="w-1/2 h-1/2 object-cover rounded">
+                                
+                                <!-- Text -->
+                                <h2 class="text-[40px] font-bold mt-3">Apples</h2>
+                                <p class="text-gray-800 text-[16px] mt-3 w-[300px]">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                
+                                <!-- Star Rating -->
+                                <div class="rating pt-[20px]">
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <!-- button section  -->
+                                <div class="gap-[35px]">
+                                <!-- Close Button -->
+                                <button class="w-[110px] h-[50px] border-2 border-[#F85559] bg-white text-[#F85559] rounded-lg mt-[32px]" onclick="closeModal()">Close</button>
+                                <!-- Button -->
+                                <button class="w-[154px] h-[50px] bg-[#F85559] rounded-lg mt-[32px]">Buy Now</button>
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Orange  -->
+                <div class="w-[335px] h-[477px] border-2 rounded-lg border-[#1212121a] p-[50px] flex flex-col justify-between items-center">
+                    <div class="border-b-2 border-[#1212121a] w-[244px] pb-[30px] text-center flex flex-col items-center justify-center">
+                        <img src="./images/fruit7.png" alt="">
+                        <h2 class="pt-[30px] font-[700] text-[24px]">12.90$ - 18.85$</h2>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <div class="">
+                            <p class="">Orange</p>
+                        </div>
+                        <!-- rating section  -->
+                        <div class="rating pt-[30px]">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <!-- modal section  -->
+                        <div class="pt-[30px] flex flex-col justify-center items-center align-middle text-center">
+                            <!-- Modal Trigger Button -->
+                            <button class="text-[#F85559]" onclick="openModal()">Details</button>
+
+                            <!-- Modal Overlay -->
+                            <div class="w-[100%] h-[100%] fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-10" id="modal">
+                            <!-- Modal Content -->
+                                <div class="w-[500px] h-[600px] bg-white p-6 rounded-lg flex flex-col justify-center items-center align-middle text-center">
+                                <!-- Image -->
+                                <img src="./images/fruit7.png" alt="Image" class="w-1/2 h-1/2 object-cover rounded">
+                                
+                                <!-- Text -->
+                                <h2 class="text-[40px] font-bold mt-3">Orange</h2>
+                                <p class="text-gray-800 text-[16px] mt-3 w-[300px]">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                
+                                <!-- Star Rating  -->
+                                <div class="rating pt-[20px]">
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <!-- button section  -->
+                                <div class="gap-[35px]">
+                                <!-- Close Button -->
+                                <button class="w-[110px] h-[50px] border-2 border-[#F85559] bg-white text-[#F85559] rounded-lg mt-[32px]" onclick="closeModal()">Close</button>
+                                <!-- Button -->
+                                <button class="w-[154px] h-[50px] bg-[#F85559] rounded-lg mt-[32px]">Buy Now</button>
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Red Dragon  -->
+                <div class="w-[335px] h-[477px] border-2 rounded-lg border-[#1212121a] p-[50px] flex flex-col justify-between items-center">
+                    <div class="border-b-2 border-[#1212121a] w-[244px] pb-[30px] text-center flex flex-col items-center justify-center">
+                        <img src="./images/fruit8.png" alt="">
+                        <h2 class="pt-[30px] font-[700] text-[24px]">12.90$ - 18.85$</h2>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <div class="">
+                            <p class="">Red Dragon</p>
+                        </div>
+                        <!-- rating section  -->
+                        <div class="rating pt-[30px]">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <!-- modal section  -->
+                        <div class="pt-[30px] flex flex-col justify-center items-center align-middle text-center">
+                            <!-- Modal Trigger Button -->
+                            <button class="text-[#F85559]" onclick="openModal()">Details</button>
+
+                            <!-- Modal Overlay -->
+                            <div class="w-[100%] h-[100%] fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-10" id="modal">
+                            <!-- Modal Content -->
+                                <div class="w-[500px] h-[600px] bg-white p-6 rounded-lg flex flex-col justify-center items-center align-middle text-center">
+                                <!-- Image -->
+                                <img src="./images/fruit8.png" alt="Image" class="w-1/2 h-1/2 object-cover rounded">
+                                
+                                <!-- Text -->
+                                <h2 class="text-[40px] font-bold mt-3">Red Dragon</h2>
+                                <p class="text-gray-800 text-[16px] mt-3 w-[300px]">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                
+                                <!-- Star Rating  -->
+                                <div class="rating pt-[20px]">
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <!-- button section  -->
+                                <div class="gap-[35px]">
+                                <!-- Close Button -->
+                                <button class="w-[110px] h-[50px] border-2 border-[#F85559] bg-white text-[#F85559] rounded-lg mt-[32px]" onclick="closeModal()">Close</button>
+                                <!-- Button -->
+                                <button class="w-[154px] h-[50px] bg-[#F85559] rounded-lg mt-[32px]">Buy Now</button>
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Banana  -->
+                <div class="w-[335px] h-[477px] border-2 rounded-lg border-[#1212121a] p-[50px] flex flex-col justify-between items-center">
+                    <div class="border-b-2 border-[#1212121a] w-[244px] pb-[30px] text-center flex flex-col items-center justify-center">
+                        <img src="./images/fruit9.png" alt="">
+                        <h2 class="pt-[30px] font-[700] text-[24px]">12.90$ - 18.85$</h2>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                        <div class="">
+                            <p class="">Banana</p>
+                        </div>
+                        <!-- rating section  -->
+                        <div class="rating pt-[30px]">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <!-- modal section  -->
+                        <div class="pt-[30px] flex flex-col justify-center items-center align-middle text-center">
+                            <!-- Modal Trigger Button -->
+                            <button class="text-[#F85559]" onclick="openModal()">Details</button>
+
+                            <!-- Modal Overlay -->
+                            <div class="w-[100%] h-[100%] fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-10" id="modal">
+                            <!-- Modal Content -->
+                                <div class="w-[500px] h-[600px] bg-white p-6 rounded-lg flex flex-col justify-center items-center align-middle text-center">
+                                <!-- Image -->
+                                <img src="./images/fruit9.png" alt="Image" class="w-1/2 h-1/2 object-cover rounded">
+                                
+                                <!-- Text -->
+                                <h2 class="text-[40px] font-bold mt-3">Banana</h2>
+                                <p class="text-gray-800 text-[16px] mt-3 w-[300px]">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                
+                                <!-- Star Rating -->
+                                <div class="rating pt-[20px]">
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <!-- button section  -->
+                                <div class="gap-[35px]">
+                                <!-- Close Button -->
+                                <button class="w-[110px] h-[50px] border-2 border-[#F85559] bg-white text-[#F85559] rounded-lg mt-[32px]" onclick="closeModal()">Close</button>
+                                <!-- Button -->
+                                <button class="w-[154px] h-[50px] bg-[#F85559] rounded-lg mt-[32px]">Buy Now</button>
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- button  -->
+            <div class="flex justify-center">
+                <button
+                    class="w-[154px] h-[50px] bg-[#F85559] rounded-lg mt-[32px]"
+                  >
+                    Shop All
+                  </button>
+            </div>
+        </div>
+    </main>
     <footer></footer>
   </body>
 </html>
